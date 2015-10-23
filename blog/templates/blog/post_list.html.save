@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<html>
+        <head>
+            <title>Django Bryan Blog</title>
+
+	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+             
+        </head>
+        <body>
+            {%for Post in publicaciones%}
+            <div>
+              <p>Publicada: {{Post.published_date}}<p>
+                <h1><a href="">{{Post.title}}</a></h1>
+                <p>{{Post.text|linebreaks}}</p>
+            </div>
+            {%endfor%}
+        </body>
+    </html>
